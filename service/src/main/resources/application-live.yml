@@ -1,0 +1,8 @@
+#=======================
+#  Spring
+#=======================
+spring:
+  datasource:
+    drive-class-name: com.mysql.cj.jdbc.Drive
+    url: jdbc:mysql://database-1.cgyurksgznyj.us-east-1.rds.amazonaws.com:3306/bluemeet?&serverTimezone=UTC&useSSL=false
+    username: admin

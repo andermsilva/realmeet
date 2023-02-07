@@ -20,7 +20,6 @@ paths:
             type: integer
             format: int64
 
-
       responses:
 
         '200':
