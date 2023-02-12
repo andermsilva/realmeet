@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class RoomController implements RoomsApi {
 
