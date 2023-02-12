@@ -11,7 +11,6 @@ phases:
 artifacts:
   filters:
     - service/target/*.jar
-    - '**/*
   discard-paths: yes
 cache:
   paths:
