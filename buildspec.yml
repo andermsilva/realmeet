@@ -10,7 +10,7 @@ phases:
 
       java: corretto17
 
-      docker: 19
+      docker: 20
 
   build:
 
