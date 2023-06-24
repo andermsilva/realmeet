@@ -11,7 +11,7 @@ server:
 #=======================
 spring:
   profiles:
-    active: dev
+    active: live
   datasource:
     drive-class-name: com.mysql.cj.jdbc.Drive
     url: jdbc:mysql://localhost:3306/bluemeet?createDatabaseIfNotExist=true&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
