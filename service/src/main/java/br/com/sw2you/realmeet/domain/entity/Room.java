@@ -1,27 +1,28 @@
 package br.com.sw2you.realmeet.domain.entity;
 
 import static java.util.Objects.*;
-import java.util.Objects;
 
 import jakarta.persistence.*;
-
+import java.util.Objects;
 
 @Entity
 @Table(name = "room")
 public class Room {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name" ,nullable =false)
+
+    @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "seats" ,nullable =false)
 
+    @Column(name = "seats", nullable = false)
     private Integer seats;
-    @Column(name = "active" ,nullable =false)
 
+    @Column(name = "active", nullable = false)
     private Boolean active;
 
-    public Room(){}
+    public Room() {}
+
     private Room(Long id, String name, Integer seats, Boolean active) {
         this.id = id;
         this.name = name;
@@ -29,12 +30,13 @@ public class Room {
         this.active = active;
     }
 
-   @PrePersist
-    public void prePersist(){
-        if(isNull((active))){
-            active =true;
+    @PrePersist
+    public void prePersist() {
+        if (isNull((active))) {
+            active = true;
         }
     }
+
     public Long getId() {
         return id;
     }
@@ -61,7 +63,7 @@ public class Room {
             Objects.equals(name, room.name) &&
             Objects.equals(seats, room.seats) &&
             Objects.equals(active, room.active)
-         );
+        );
     }
 
     @Override
@@ -71,29 +73,20 @@ public class Room {
 
     @Override
     public String toString() {
-        return (
-            "Room{" +
-            "id=" + id +
-            ", name='" + name + '\'' +
-            ", seats=" + seats +
-            ", active=" + active +
-            '}'
-        );
+        return ("Room{" + "id=" + id + ", name='" + name + '\'' + ", seats=" + seats + ", active=" + active + '}');
     }
 
     public static Builder newBuilder() {
         return new Builder();
     }
+
     public static final class Builder {
         private Long id;
         private String name;
         private Integer seats;
         private Boolean active;
 
-        private Builder() {
-        }
-
-
+        private Builder() {}
 
         public Builder id(Long id) {
             this.id = id;
