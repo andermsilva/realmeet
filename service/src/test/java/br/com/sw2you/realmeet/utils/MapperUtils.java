@@ -4,9 +4,10 @@ import br.com.sw2you.realmeet.mapper.RoomMapper;
 import org.mapstruct.factory.Mappers;
 
 public final class MapperUtils {
-    private MapperUtils(){}
 
-    public static RoomMapper rooMapper(){
+    private MapperUtils() {}
+
+    public static RoomMapper rooMapper() {
         return Mappers.getMapper(RoomMapper.class);
     }
 }

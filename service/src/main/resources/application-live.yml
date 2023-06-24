@@ -4,12 +4,5 @@
 spring:
   datasource:
     drive-class-name: com.mysql.cj.jdbc.Drive
-#   url: jdbc:mysql://database.cgyurksgznyj.us-east-1.rds.amazonaws.com:3306/bluemeet?&serverTimezone=UTC&useSSL=false
     url: jdbc:mysql:containers-us-west-189.railway.app:5899/railway?&serverTimezone=UTC&useSSL=false
     username: root
-    # mysql://root:7W1L8uuoU5AWYVRJuf2q@containers-us-west-189.railway.app:5899/railway
-    # railway
-    # containers-us-west-189.railway.app
-    # senha 7W1L8uuoU5AWYVRJuf2q
-    # 5899
-    # root
