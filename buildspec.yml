@@ -8,9 +8,9 @@ phases:
 
     runtime-versions:
 
-      java: corretto17
+      java: corretto19
 
-      docker: 20
+      docker: 23
 
   build:
 
