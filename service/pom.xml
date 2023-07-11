@@ -36,11 +36,14 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
+            <version>9.16.0</version>
+
         </dependency>
 
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-mysql</artifactId>
+            <version>9.16.0</version>
         </dependency>
 
 
@@ -99,11 +102,13 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <version>1.17.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>mysql</artifactId>
+            <version>1.17.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -135,6 +140,14 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
+
+<!--   web     -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -165,11 +178,17 @@
                 <filtering>true</filtering>
             </resource>
             <resource>
-                <directory>src/test/resources</directory>
+                <directory>src/test/resourcess</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>9.10.0</version>
+
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -249,7 +268,13 @@
                                 <configPackage>${api.path}.api.config</configPackage>
                                 <classpathTargetSpec>${openapi-spec.classpath}</classpathTargetSpec>
                                 <isCorsEnabled>true</isCorsEnabled>
+                                <baselineOnMigrate>true</baselineOnMigrate>
+                                <cleanDisabled>true</cleanDisabled>
+
                             </configOptions>
+
+
+
                         </configuration>
                     </execution>
                 </executions>

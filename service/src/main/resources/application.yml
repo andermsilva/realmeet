@@ -11,10 +11,11 @@ server:
 #=======================
 spring:
   profiles:
-    active: live
+    active: dev
   datasource:
     drive-class-name: com.mysql.cj.jdbc.Drive
     url: jdbc:mysql://localhost:3306/bluemeet?createDatabaseIfNotExist=true&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+#    url: jdbc:mysql:containers-us-west-189.railway.app:5899/railway?&serverTimezone=UTC&useSSL=false
     username: root
     password: ander22
     type: com.zaxxer.hikari.HikariDataSource

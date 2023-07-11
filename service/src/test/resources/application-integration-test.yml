@@ -1,0 +1,8 @@
+---
+spring:
+  datasource:
+    drive-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:mysql:latest://localhost/bluemeet
+    username: root
+    password: ander22
+
