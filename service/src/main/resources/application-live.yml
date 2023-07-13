@@ -4,5 +4,5 @@
 spring:
   datasource:
     drive-class-name: com.mysql.cj.jdbc.Drive
-    url: jdbc:mysql:containers-us-west-189.railway.app:5899/railway?&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql:containers-us-west-66.railway.app:6899/railway?&serverTimezone=UTC&useSSL=false
     username: root
